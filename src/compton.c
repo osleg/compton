@@ -1406,7 +1406,7 @@ win_blur_background(session_t *ps, win *w, Picture tgt_buffer,
   // better during fading
   if (!ps->o.blur_background_fixed) {
     double pct = 1.0 - get_opacity_percent(w) * (1.0 - 1.0 / 9.0);
-    factor_center = pct * 8.0 / (1.1 - pct);
+    factor_center = pct; // * 8.0 / (1.1 - pct);
   }
 
   // TODO: Handle frame opacity
