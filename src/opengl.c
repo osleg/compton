@@ -1219,7 +1219,7 @@ glx_blur_dst(session_t *ps, int dx, int dy, int width, int height, float z,
     // Use the shader
     glUseProgram(ppass->prog);
 
-    int level = 3;
+    int level = 3 - (int)(2 * (factor_center * 0.1f));
 
     // Downscale
     for (int i = 0; i < level; i++) {
